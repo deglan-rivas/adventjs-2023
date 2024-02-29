@@ -24,3 +24,12 @@ export const findFirstRepeated = (numbers) => {
 
 // const a = findFirstRepeated([1, 2, 3, 3, 5])
 // console.log(a)
+
+// FINAL SOLUTION TO https://adventjs.dev/es/challenges/2023/1
+// function findFirstRepeated(gifts) {
+//   const unrepeatedNumbers = [...new Set(gifts)]
+//   if (unrepeatedNumbers.length === gifts.length) return -1
+
+//   const firstRepeated = gifts.find((number, index) => unrepeatedNumbers[index] !== number)
+//   return firstRepeated
+// }
