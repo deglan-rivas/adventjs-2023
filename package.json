@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "dev": "node src/fizzbuzz.js"
+    "dev": "node src/01.js"
   },
   "keywords": [],
   "author": "",
