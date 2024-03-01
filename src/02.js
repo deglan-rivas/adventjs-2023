@@ -21,3 +21,4 @@ const result = manufacture(['tren', 'oso', 'pelota'], 'tronesa')
 console.log(result)
 
 // usar set para evitar operaciones innecesarias 'alala' solo debe buscar 'a' y 'l' 1 vez y no 2-3 veces para ambos gifts y materials
+// esta solución es N^3 -> refactorizar
