@@ -31,11 +31,49 @@ describe('testing example 05', () => {
     expect(result.length).toBe(time)
   })
 
-  it('should move the Santa for the road without walls')
-  const road = 'S...'
-  const time = 3
+  it('should move the Santa for the road without walls', () => {
+    const road = 'S...'
+    const time = 3
 
-  const result = cyberReindeer(road, time)
+    const result = cyberReindeer(road, time)
 
-  expect(result).toEqual(['S...', '.S..', '..S.'])
+    expect(result).toEqual(['S...', '.S..', '..S.'])
+  })
+
+  it('should move the Santa for the road with walls and max time greater than 5', () => {
+    const road = 'S....||'
+    const time = 7
+
+    const result = cyberReindeer(road, time)
+
+    expect(result).toEqual([
+      'S....||',
+      '.S...||',
+      '..S..||',
+      '...S.||',
+      '....S||',
+      '.....S*',
+      '.....*S'
+    ])
+  })
+
+  it('should move the Santa for the road with walls and max time less than 5', () => {
+    const road = 'S..|...|..'
+    const time = 10
+
+    const result = cyberReindeer(road, time)
+
+    expect(result).toEqual([
+      'S..|...|..',
+      '.S.|...|..',
+      '..S|...|..',
+      '..S|...|..',
+      '..S|...|..',
+      '...S...*..',
+      '...*S..*..',
+      '...*.S.*..',
+      '...*..S*..',
+      '...*...S..'
+    ])
+  })
 })
