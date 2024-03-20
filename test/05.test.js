@@ -20,10 +20,22 @@ describe('testing example 05', () => {
     expect(() => cyberReindeer('string', true)).toThrow()
   })
 
-  it('should return an array of strings', () => {
-    const result = cyberReindeer('hola', 1)
+  it('should return an array of strings with length equal to time', () => {
+    const road = 'hola'
+    const time = 3
+
+    const result = cyberReindeer(road, time)
 
     expect(Array.isArray(result)).toBe(true)
     expect(result.every((element) => typeof element === 'string')).toEqual(true)
+    expect(result.length).toBe(time)
   })
+
+  it('should move the Santa for the road without walls')
+  const road = 'S...'
+  const time = 3
+
+  const result = cyberReindeer(road, time)
+
+  expect(result).toEqual(['S...', '.S..', '..S.'])
 })
